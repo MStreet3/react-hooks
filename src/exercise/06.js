@@ -15,9 +15,9 @@ import {ErrorBoundary} from 'react-error-boundary'
 function FallbackPokemonInfo({error, resetErrorBoundary}) {
   return (
     <div role="alert">
-      <p>Something went wrong:</p>
-      <div style={{color: 'red'}}>{error.message}</div>
-      <button onClick={resetErrorBoundary}>Try Again</button>
+      There was an error:{' '}
+      <pre style={{whiteSpace: 'normal'}}>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Try again</button>
     </div>
   )
 }
